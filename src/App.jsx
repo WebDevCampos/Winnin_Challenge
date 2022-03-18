@@ -1,22 +1,16 @@
-import "./App.css";
+import Header from "./Components/Header/Header";
+import TopNavigation from "./Components/TopNavigation/TopNavigation";
+import Footer from "./Components/Footer/Footer";
 
+import "./App.css";
 function App() {
   return (
-    <>
-      <header
-        id="header"
-        style={{
-          backgroundColor: "var(--roxo)",
-          fontFamily: "var(--Mulish)",
-          fontSize: 40,
-          color: "white",
-        }}
-      >
-        Oi
-      </header>
+    <div className="App">
+      <Header />
+      <TopNavigation />
 
-      <main id="main"></main>
-    </>
+      <Footer />
+    </div>
   );
 }
 

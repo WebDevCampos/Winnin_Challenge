@@ -1,0 +1,7 @@
+.mainFooter {
+  background: var(--mainBackground);
+  color: #fff;
+  font-family: Mulish;
+  height: 48px;
+  border-radius: 8px;
+}
