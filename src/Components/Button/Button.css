@@ -1,25 +1,20 @@
-.activeCategorie {
+.activeCategorie .categorieButton {
   background: var(--mainBackground);
 }
 .categorieButton {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   background: #a7b0be;
   width: 202px;
   height: 48px;
   border-radius: 8px;
   font: normal 600 25px/25px Mulish, sans-serif;
-
   text-align: center;
 }
+
 .categorieButton:hover {
   background: var(--mainBackground);
-}
-.categorieButton:active,
-.categorieButton:hover,
-.categorieButton:visited {
   color: #fff;
 }
 

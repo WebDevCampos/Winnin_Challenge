@@ -9,6 +9,7 @@ function Card({ title, postedby, time }) {
           enviado há <span className="post_time">{time}</span> horas por{" "}
           <span className="post_author">{postedby}</span>
         </p>
+        <p className="post_detail">dominio.io</p>
       </div>
     </div>
   );

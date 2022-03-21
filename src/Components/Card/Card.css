@@ -10,6 +10,20 @@
 .post_author {
   color: #6324c6;
 }
+
+.post_detail {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
 @media screen and (max-width: 780px) {
   .post_title {
     font-size: 20px;
