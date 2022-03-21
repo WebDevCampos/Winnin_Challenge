@@ -1,3 +1,6 @@
+.activeCategorie {
+  background: var(--mainBackground);
+}
 .categorieButton {
   display: inline-flex;
   justify-content: center;
@@ -15,7 +18,6 @@
   background: var(--mainBackground);
 }
 .categorieButton:active,
-.categorieButton:focus,
 .categorieButton:hover,
 .categorieButton:visited {
   color: #fff;

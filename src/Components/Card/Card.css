@@ -1,3 +1,15 @@
+.post_info,
+.post_time {
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+
+  color: #4c5667;
+}
+
+.post_author {
+  color: #6324c6;
+}
 @media screen and (max-width: 780px) {
   .post_title {
     font-size: 20px;

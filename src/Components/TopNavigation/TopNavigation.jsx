@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function TopNavigation() {
   return (
     <Router>
-      <div className="d-flex justify-content-around align-items-center p-3">
+      <div className="container d-flex justify-content-center align-items-center p-3">
         <Link to="/" className="linkToHot">
           <Button categorie="Hot" />
         </Link>

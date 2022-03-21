@@ -10,6 +10,7 @@ function Rising() {
         setContent(
           mainContent.map((item) => (
             <Card
+              key={item.data.id}
               title={item.data.title}
               time={(item.data.created_utc / 1000 / 60 / 60 / 24).toFixed(0)}
               postedby={item.data.author}

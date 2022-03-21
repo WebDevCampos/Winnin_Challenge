@@ -7,7 +7,7 @@ function Footer() {
       onClick={() => {
         document.querySelector("main").style.overflow = "visible";
         document.querySelector("main").style.height = "auto";
-        scroll(0, 1000);
+        scroll(0, 800);
       }}
     >
       + Ver Mais
