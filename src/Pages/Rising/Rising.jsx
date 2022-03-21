@@ -8,15 +8,13 @@ function Rising() {
       .then((data) => {
         const mainContent = data.data.children;
         setContent(
-          mainContent
-            .map((item) => (
-              <Card
-                title={item.data.title}
-                time={(item.data.created_utc / 1000 / 60 / 60 / 24).toFixed(0)}
-                postedby={item.data.author}
-              />
-            ))
-            .slice(0, 5)
+          mainContent.map((item) => (
+            <Card
+              title={item.data.title}
+              time={(item.data.created_utc / 1000 / 60 / 60 / 24).toFixed(0)}
+              postedby={item.data.author}
+            />
+          ))
         );
       })
       .catch((e) => console.log(e));
