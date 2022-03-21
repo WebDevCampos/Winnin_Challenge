@@ -1,0 +1,10 @@
+@media screen and (max-width: 780px) {
+  .post_title {
+    font-size: 20px;
+  }
+  .post_info,
+  .post_time,
+  .post_author {
+    font-size: 14px;
+  }
+}

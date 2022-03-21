@@ -20,3 +20,10 @@
 .categorieButton:visited {
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .categorieButton {
+    width: 100px;
+    font: normal 600 15px/25px Mulish, sans-serif;
+  }
+}
