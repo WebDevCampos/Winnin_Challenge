@@ -20,14 +20,13 @@
 
 @media screen and (max-width: 768px) {
   .categorieButton {
-    width: 150px;
+    width: 100%;
     font: normal 600 15px/25px Mulish, sans-serif;
   }
 }
 
 @media screen and (max-width: 600px) {
   .categorieButton {
-    width: 120px;
     font: normal 600 15px/25px Mulish, sans-serif;
   }
 }
