@@ -8,15 +8,15 @@ function Hot() {
       .then((data) => {
         const mainContent = data.data.children;
         for (let x = 0; x < 3; x++) {
-          x = setContent(
-            mainContent.map((item, key) => (
+          setContent(
+            (x += mainContent.map((item, key) => (
               <Card
                 key={item.data.id}
                 title={item.data.title}
                 time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
                 postedby={item.data.author}
               />
-            ))
+            )))
           );
         }
       })
