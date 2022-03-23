@@ -8,14 +8,12 @@ function Hot() {
       .then((data) => {
         const mainContent = data.data.children;
 
-        setContent(
-          mainContent.reduce((acc, curr) => {
-            for (let x = 0; x < 3; x++) {
-              x += acc + curr.data.title;
-              return x;
-            }
-          }, "")
-        );
+        setContent(() => {
+          for (let x = 0; x < 3; x++) {
+            x.innerHTML += mainContent[x].data.title;
+            return x;
+          }
+        });
 
         // mainContent.map((item, key) => (
         //   <Card
