@@ -9,22 +9,15 @@ function Hot() {
         const mainContent = data.data.children;
 
         setContent(
-          mainContent.map((item) => {
-            for (let x = 0; x < 3; x++) {
-              x += <Card title={item.data.title} />;
-              return x;
-            }
-          })
+          mainContent.map((item, key) => (
+            <Card
+              key={item.data.id}
+              title={item.data.title}
+              time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
+              postedby={item.data.author}
+            />
+          ))
         );
-
-        // mainContent.map((item, key) => (
-        //   <Card
-        //     key={item.data.id}
-        //     title={item.data.title}
-        //     time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
-        //     postedby={item.data.author}
-        //   />
-        // ))
       })
       .catch((e) => console.log(e));
   }
