@@ -8,7 +8,7 @@ function Hot() {
       .then((data) => {
         const mainContent = data.data.children;
         for (let x = 0; x < 3; x++) {
-          setContent(
+          x = setContent(
             mainContent.map((item, key) => (
               <Card
                 key={item.data.id}
