@@ -10,7 +10,7 @@ function Hot() {
 
         setContent(() => {
           for (let x = 0; x < 3; x++) {
-            x.innerHTML += mainContent[x].data.title;
+            x += mainContent[x].data.title;
             return x;
           }
         });
