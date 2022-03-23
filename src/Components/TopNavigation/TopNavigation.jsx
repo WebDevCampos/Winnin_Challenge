@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function TopNavigation() {
   return (
     <Router>
-      <div className="container d-flex justify-content-center align-items-center p-3">
+      <div className="d-flex justify-content-center align-items-center p-3 topNavigation">
         <Link
           to="/"
           className="linkToPage"
