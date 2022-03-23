@@ -9,17 +9,25 @@ function Hot() {
         const mainContent = data.data.children;
 
         setContent(
-          mainContent.map((item, key) => {
-            for (let x = 0; x < 3; x++) {
+          mainContent.reduce((acc, key) => {
+            acc += (
               <Card
                 key={item.data.id}
                 title={item.data.title}
                 time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
                 postedby={item.data.author}
-              />;
-            }
-          })
+              />
+            );
+          }, 3)
         );
+        // mainContent.map((item, key) => (
+        //   <Card
+        //     key={item.data.id}
+        //     title={item.data.title}
+        //     time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
+        //     postedby={item.data.author}
+        //   />
+        // ))
       })
       .catch((e) => console.log(e));
   }
