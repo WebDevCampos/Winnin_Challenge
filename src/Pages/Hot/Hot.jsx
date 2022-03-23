@@ -8,14 +8,16 @@ function Hot() {
       .then((data) => {
         const mainContent = data.data.children;
         setContent(
-          mainContent.map((item, key) => (
-            <Card
-              key={item.data.id}
-              title={item.data.title}
-              time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
-              postedby={item.data.author}
-            />
-          ))
+          mainContent.filter((item, key) =>
+            item < 10 ? (
+              <Card
+                key={item.data.id}
+                title={item.data.title}
+                time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
+                postedby={item.data.author}
+              />
+            ) : null
+          )
         );
       })
       .catch((e) => console.log(e));
