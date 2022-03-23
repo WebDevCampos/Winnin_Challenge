@@ -9,14 +9,14 @@ function Hot() {
         const mainContent = data.data.children;
 
         setContent(() => {
-          for (let x = 0; x < mainContent.length; x++) {
-            return (
+          for (let x = 0; x < 3; x++) {
+            return (x += (
               <Card
                 title={mainContent[x].data.title}
                 postedby={mainContent[x].data.author}
                 time={mainContent[x].data.created_utc}
               />
-            );
+            ));
           }
         });
         // mainContent.map((item, key) => (
