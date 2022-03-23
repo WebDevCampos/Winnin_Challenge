@@ -27,9 +27,11 @@ function TopNavigation() {
         </div>
       </div>
       <Routes>
-        <Route exact path="/" element={<Hot />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/rising" element={<Rising />} />
+        <div className="container  d-flex justify-content-center align-items-center p-3">
+          <Route exact path="/" element={<Hot />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/rising" element={<Rising />} />
+        </div>
       </Routes>
     </Router>
   );
