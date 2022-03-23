@@ -10,7 +10,7 @@ function Hot() {
 
         setContent(() => {
           for (let x = 0; x < 3; x++) {
-            return mainContent[x].data.title;
+            x += mainContent[x].data.title;
           }
         });
 
