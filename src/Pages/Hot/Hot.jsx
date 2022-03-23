@@ -7,14 +7,10 @@ function Hot() {
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
+        for (let x = 0; x < 3; x++) {
+          return setContent(mainContent[x].data.title);
+        }
 
-        setContent(() => {
-          for (let x = 0; x < 3; x++) {
-            return mainContent.map((item) => {
-              <Card title={item.data.title} />;
-            });
-          }
-        });
         // mainContent.map((item, key) => (
         //   <Card
         //     key={item.data.id}
