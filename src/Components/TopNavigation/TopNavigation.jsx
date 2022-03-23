@@ -7,22 +7,24 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function TopNavigation() {
   return (
     <Router>
-      <div className="container d-flex justify-content-center align-items-center p-3">
-        <Link
-          to="/"
-          className="linkToPage"
-          onClick={(e) => {
-            console.log(e.target);
-          }}
-        >
-          <Button categorie="Hot" />
-        </Link>
-        <Link to="news" className="linkToPage">
-          <Button categorie="News" />
-        </Link>
-        <Link to="rising" className="linkToPage">
-          <Button categorie="Rising" />
-        </Link>
+      <div className="container ">
+        <div className="d-flex justify-content-center align-items-center p-3">
+          <Link
+            to="/"
+            className="linkToPage"
+            onClick={(e) => {
+              console.log(e.target);
+            }}
+          >
+            <Button categorie="Hot" />
+          </Link>
+          <Link to="news" className="linkToPage">
+            <Button categorie="News" />
+          </Link>
+          <Link to="rising" className="linkToPage">
+            <Button categorie="Rising" />
+          </Link>
+        </div>
       </div>
       <Routes>
         <Route exact path="/" element={<Hot />} />

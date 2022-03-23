@@ -24,3 +24,10 @@
     font: normal 600 15px/25px Mulish, sans-serif;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .categorieButton {
+    width: 85px;
+    font: normal 600 12px/25px Mulish, sans-serif;
+  }
+}
