@@ -8,18 +8,13 @@ function Hot() {
       .then((data) => {
         const mainContent = data.data.children;
 
-        setContent(
-          mainContent.forEach((item) => {
-            return (
-              <Card
-                key={item.data.id}
-                title={item.data.title}
-                time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
-                postedby={item.data.author}
-              />
-            );
-          })
-        );
+        setContent(() => {
+          for (let x = 0; x < 3; x++) {
+            return mainContent.map((item) => {
+              <Card title={item.data.title} />;
+            });
+          }
+        });
         // mainContent.map((item, key) => (
         //   <Card
         //     key={item.data.id}
