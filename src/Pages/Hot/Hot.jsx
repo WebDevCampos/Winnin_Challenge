@@ -10,7 +10,14 @@ function Hot() {
 
         setContent(() => {
           for (let x = 0; x < 3; x++) {
-            return mainContent[x].data.title;
+            return mainContent.map((item, key) => {
+              <Card
+                key={item.data.id}
+                title={item.data.title}
+                postedby={item.data.author}
+                time={item.data.created_utc}
+              />;
+            });
           }
         });
 
