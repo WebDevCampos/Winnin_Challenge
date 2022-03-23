@@ -10,12 +10,14 @@ function Hot() {
 
         setContent(
           mainContent.forEach((item) => {
-            <Card
-              key={item.data.id}
-              title={item.data.title}
-              time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
-              postedby={item.data.author}
-            />;
+            return (
+              <Card
+                key={item.data.id}
+                title={item.data.title}
+                time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
+                postedby={item.data.author}
+              />
+            );
           })
         );
         // mainContent.map((item, key) => (
