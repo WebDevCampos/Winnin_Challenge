@@ -1,7 +1,7 @@
 import "./Button.css";
 function Button({ categorie }) {
   return (
-    <div className="activeCategorie categorieButton  mx-1 mx-md-3">
+    <div className="activeCategorie categorieButton  mx-3 mx-md-1">
       {categorie}
     </div>
   );
