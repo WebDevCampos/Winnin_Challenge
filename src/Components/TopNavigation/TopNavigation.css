@@ -1,3 +1,6 @@
+.topNavigation {
+  min-width: 100%;
+}
 .linkToPage {
   text-decoration: none;
   color: #fff;
