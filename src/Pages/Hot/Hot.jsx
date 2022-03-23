@@ -7,18 +7,19 @@ function Hot() {
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
-        for (let x = 0; x < 3; x++) {
-          setContent(
-            (x += mainContent.map((item, key) => (
+
+        setContent(
+          mainContent.map((item, key) => {
+            for (let x = 0; x < 3; x++) {
               <Card
                 key={item.data.id}
                 title={item.data.title}
                 time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
                 postedby={item.data.author}
-              />
-            )))
-          );
-        }
+              />;
+            }
+          })
+        );
       })
       .catch((e) => console.log(e));
   }
