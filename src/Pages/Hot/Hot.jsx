@@ -10,8 +10,11 @@ function Hot() {
 
         setContent(
           mainContent.reduce((acc, curr) => {
-            return acc + curr.data.title;
-          }, 3)
+            for (let x = 0; x < 3; x++) {
+              x += acc + curr.data.title;
+              return x;
+            }
+          }, "")
         );
 
         // mainContent.map((item, key) => (
