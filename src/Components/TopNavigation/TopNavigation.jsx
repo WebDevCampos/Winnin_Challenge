@@ -8,13 +8,7 @@ function TopNavigation() {
   return (
     <Router>
       <div className="container d-flex justify-content-center my-3">
-        <Link
-          to="/"
-          className="linkToPage"
-          onClick={(e) => {
-            console.log(e.target);
-          }}
-        >
+        <Link to="/" className="linkToPage">
           <Button categorie="Hot" />
         </Link>
         <Link to="news" className="linkToPage">
