@@ -7,9 +7,8 @@ function Hot() {
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
-
         setContent(
-          mainContent.map((item, key) => (
+          mainContent.map((item) => (
             <Card
               key={item.data.id}
               title={item.data.title}
