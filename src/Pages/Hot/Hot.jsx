@@ -7,15 +7,23 @@ function Hot() {
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
+
         setContent(
           mainContent.map((item) => (
             <Card
               key={item.data.id}
               title={item.data.title}
-              time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
+              time={(item.data.created_utc / 8.64e7).toFixed(0)}
               postedby={item.data.author}
             />
           ))
+        );
+        console.log(
+          mainContent[0].format(
+            new Date(fromUnixTime(article.data.created)),
+            "'Dia' dd 'de' MMMM 'de' yyyy', às ' HH:mm'h'"
+          ),
+          mainContent[1].data.created_utc
         );
       })
       .catch((e) => console.log(e));

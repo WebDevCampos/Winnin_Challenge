@@ -12,7 +12,7 @@ function Rising() {
             <Card
               key={item.data.id}
               title={item.data.title}
-              time={(item.data.created_utc / 3.6e6 / 24).toFixed(0)}
+              time={(item.data.created_utc / 8.64e7).toFixed(0)}
               postedby={item.data.author}
             />
           ))
