@@ -28,6 +28,7 @@ function Hot() {
           ))
         );
       })
+
       .catch((e) => console.log(e));
   }
   const [content, setContent] = useState(FetchMe);
