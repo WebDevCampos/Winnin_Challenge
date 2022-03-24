@@ -1,5 +1,9 @@
 import "./News.css";
 import { useState } from "react";
+
+import { formatDistance } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import fromUnixTime from "date-fns/fromUnixTime";
 import Card from "../../Components/Card/Card";
 function News() {
   function FetchMe() {
@@ -12,7 +16,13 @@ function News() {
             <Card
               key={item.data.id}
               title={item.data.title}
-              time={(item.data.created_utc / 8.64e7).toFixed(0)}
+              time={formatDistance(
+                new Date(fromUnixTime(item.data.created)),
+                new Date(),
+                {
+                  locale: ptBR,
+                }
+              )}
               postedby={item.data.author}
             />
           ))

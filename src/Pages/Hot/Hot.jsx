@@ -1,6 +1,9 @@
 import "./Hot.css";
 import { useState } from "react";
 import Card from "../../Components/Card/Card";
+import { formatDistance } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import fromUnixTime from "date-fns/fromUnixTime";
 function Hot() {
   function FetchMe() {
     fetch("https://www.reddit.com/r/reactjs/hot.json")
@@ -13,17 +16,16 @@ function Hot() {
             <Card
               key={item.data.id}
               title={item.data.title}
-              time={(item.data.created_utc / 8.64e7).toFixed(0)}
+              time={formatDistance(
+                new Date(fromUnixTime(item.data.created)),
+                new Date(),
+                {
+                  locale: ptBR,
+                }
+              )}
               postedby={item.data.author}
             />
           ))
-        );
-        console.log(
-          mainContent[0].format(
-            new Date(fromUnixTime(article.data.created)),
-            "'Dia' dd 'de' MMMM 'de' yyyy', às ' HH:mm'h'"
-          ),
-          mainContent[1].data.created_utc
         );
       })
       .catch((e) => console.log(e));
