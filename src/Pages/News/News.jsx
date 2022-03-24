@@ -31,6 +31,10 @@ function News() {
       .catch((e) => console.log(e));
   }
   const [content, setContent] = useState(FetchMe);
-  return <main className="news_mainContent">{content}</main>;
+  return (
+    <main className="news_mainContent" name="News">
+      {content}
+    </main>
+  );
 }
 export default News;

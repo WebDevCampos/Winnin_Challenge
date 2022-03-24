@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer
-      className="d-flex justify-content-center align-items-center mainFooter  bottom-0"
+      className="container d-flex justify-content-center align-items-center mainFooter  bottom-0"
       onClick={() => {
         document.querySelector("main").style.overflow = "visible";
         document.querySelector("main").style.height = "auto";

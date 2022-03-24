@@ -9,7 +9,10 @@ function TopNavigation() {
     <Router>
       <div className="container d-flex justify-content-center my-3">
         <Link to="/" className="linkToPage">
-          <Button categorie="Hot" />
+          <Button
+            categorie="Hot"
+            onClick={(e) => (e.target.style.backgroundColor = "red")}
+          />
         </Link>
         <Link to="news" className="linkToPage">
           <Button categorie="News" />

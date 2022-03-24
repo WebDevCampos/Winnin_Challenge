@@ -1,5 +1,13 @@
-.activeCategorie .categorieButton {
+.activeCategorie {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background: var(--mainBackground);
+  width: 202px;
+  height: 48px;
+  border-radius: 8px;
+  font: normal 600 25px/25px Mulish, sans-serif;
+  text-align: center;
 }
 .categorieButton {
   display: inline-flex;
