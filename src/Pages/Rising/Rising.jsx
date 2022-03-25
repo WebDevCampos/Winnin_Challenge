@@ -37,7 +37,7 @@ function Rising() {
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
-
+        console.log(data);
         setContent(
           mainContent.map((item) => (
             <Card
