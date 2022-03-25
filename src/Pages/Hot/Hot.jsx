@@ -12,7 +12,7 @@ function Hot() {
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
-        console.log(mainContent);
+
         setContent(
           mainContent.map((item) => (
             <Card
@@ -29,6 +29,7 @@ function Hot() {
             />
           ))
         );
+        scroll(0, 500);
       })
       .catch((e) => console.log(e));
   }
