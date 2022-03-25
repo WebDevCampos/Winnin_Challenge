@@ -61,7 +61,7 @@ function Hot() {
   }
   return (
     <>
-      <main className="hot_mainContent">{content}</main>
+      <main>{content}</main>
       <footer
         className="container d-flex justify-content-center align-items-center mainFooter  bottom-0"
         onClick={() => {
