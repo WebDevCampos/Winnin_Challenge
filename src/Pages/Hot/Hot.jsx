@@ -1,30 +1,3 @@
-// import { useState, useEffect } from "react";
-// function Hot() {
-//   const [page, setPage] = useState("Hot");
-//   const [article, setArticle] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [dist, setDist] = useState(null);
-
-//   useEffect(() => {
-//     fetch("https://www.reddit.com/r/reactjs.json?limit=1").then((res) => {
-//       if (res.status !== 200) {
-//         console.log("ERROR");
-//         return;
-//       }
-//       res.json().then((data) => {
-//         if (data != null) {
-//           console.log(data);
-//           setDist(data.data.dist);
-//           console.log(dist);
-//         }
-//       });
-//     });
-//   }, []);
-
-//   return <h1>Oi</h1>;
-// }
-// export default Hot;
-
 import { useState } from "react";
 import Card from "../../Components/Card/Card";
 import { formatDistance } from "date-fns";

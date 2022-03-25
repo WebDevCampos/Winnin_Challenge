@@ -6,8 +6,8 @@ import fromUnixTime from "date-fns/fromUnixTime";
 import Card from "../../Components/Card/Card";
 function Rising() {
   const [content, setContent] = useState(FetchMe);
-  function FetchMe() {
-    fetch("https://www.reddit.com/r/reactjs/top.json?limit=3")
+  function FetchMe(limit = 3) {
+    fetch(`https://www.reddit.com/r/reactjs/top.json?limit=${limit}`)
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
@@ -32,8 +32,8 @@ function Rising() {
       .catch((e) => console.log(e));
   }
 
-  function FetchMeMore() {
-    fetch("https://www.reddit.com/r/reactjs/top.json")
+  function FetchMeMore(limit) {
+    fetch(`https://www.reddit.com/r/reactjs/top.json?limit=${limit}`)
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
@@ -64,7 +64,7 @@ function Rising() {
       <footer
         className="container d-flex justify-content-center align-items-center mainFooter  bottom-0"
         onClick={() => {
-          FetchMeMore();
+          FetchMeMore(100);
         }}
       >
         + Ver Mais
