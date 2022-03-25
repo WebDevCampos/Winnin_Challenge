@@ -35,15 +35,7 @@ function Hot() {
   }
 
   function FetchMeMore(limit) {
-    fetch(
-      `https://www.reddit.com/r/reactjs/hot.json?limit=${(function fun() {
-        for (let x = 0; x <= limit; x++) {
-          return (x += limit);
-        }
-        //Do your loop here
-        // Return the result as a string
-      })()}`
-    )
+    fetch(`https://www.reddit.com/r/reactjs/hot.json?limit=${limit}`)
       .then((res) => res.json())
       .then((data) => {
         const mainContent = data.data.children;
