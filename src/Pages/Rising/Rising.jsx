@@ -60,7 +60,7 @@ function Rising() {
   }
   return (
     <>
-      <main className="rising_mainContent">{content}</main>
+      <main>{content}</main>
       <footer
         className="container d-flex justify-content-center align-items-center mainFooter  bottom-0"
         onClick={() => {
