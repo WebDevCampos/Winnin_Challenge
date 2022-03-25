@@ -3,9 +3,6 @@
 :root {
   --mainBackground: #6324c6;
 }
-
-main {
-  position: relative;
-  height: 75vh;
-  overflow: hidden;
+.mainWrapper {
+  height: 40vh;
 }

@@ -1,14 +1,33 @@
 import Header from "./Components/Header/Header";
-import TopNavigation from "./Components/TopNavigation/TopNavigation";
-import Footer from "./Components/Footer/Footer";
+import { useEffect, useState } from "react";
 
 import "./App.css";
+
 function App() {
+  const [content, setContent] = useState([]);
+  function FetchData() {
+   
+
+    fetch(`https://www.reddit.com/r/reactjs/hot.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setContent(`${data.data.children[0].data.title} ${obj.titles}`);
+      })
+      .catch((e) => console.log(e));
+  }
   return (
     <div className="App">
       <Header />
-      <TopNavigation />
-      <Footer />
+      <button
+        onClick={(data) => {
+          FetchData();
+          console.log(data);
+        }}
+      >
+        Hot
+      </button>
+
+      <p>{content}</p>
     </div>
   );
 }
