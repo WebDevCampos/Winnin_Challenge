@@ -1,9 +1,25 @@
-import "./Header.css";
+import styled from "styled-components";
+
+const MainHeader = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 91px;
+  background: var(--mainBackground);
+  color: #fff;
+  font: normal 400 36px/45px Mulish, sans-serif;
+  text-align: center;
+  span {
+    color: #faa403;
+  }
+`;
+
 function Header() {
   return (
-    <header className="container-fuid d-flex justify-content-center align-items-center mainHeader">
+    <MainHeader>
       REACT<span>JS</span>
-    </header>
+    </MainHeader>
   );
 }
+
 export default Header;
