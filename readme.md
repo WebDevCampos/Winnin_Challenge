@@ -29,4 +29,7 @@
 
 Obrigado ao pessoal da [Winnin](https://www.winnin.com/) por disponibilizar este desafio. Iniciantes como eu sentem dificuldades em entender o que as empresas realmente procuram nos desenvolvedores e realizar um projeto assim, com requisitos e objetivos claros, me faz perceber quais caminhos devo buscar para aprimorar minhas competências.
 Estou feliz por ter realizado esses estudos e por ter aprendido mais. 
+
+#### Dia 29/03
+Consegui aplicar os styled-components e otimizar a função que busca as informações, chamando em cada botão suas respectivas categorias. Não preciso criar um `fetch` para cada categoria, apenas invocar a função e passar os parâmetros. Queria poder isolar essa função e chamá-la em outro componente, mas ainda não obtive o resultado desejado. Estudei mais sobre **Hooks**, no entanto, devo me aprofundar mais amanhã. Desfiz o **roteamento** pretendo reaplicar amanhã também.
   
