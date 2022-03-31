@@ -58,7 +58,7 @@ function App() {
       })
     );
   }, []);
-  function FetchMe(categorie, limit, x, y) {
+  function FetchMe(categorie, limit) {
     fetch(
       `https://www.reddit.com/r/reactjs/${categorie}.json?limit=${limit}`
     ).then((res) =>
@@ -69,22 +69,20 @@ function App() {
         setContent(mainContent);
         console.log(categorie);
         console.log(data);
-        scrollBy(x, y);
+        scrollBy(0,500);
       })
     );
   }
   function fetchMore() {
     let bringMorePosts = content.length + 10;
-    let scrollto = { position_x: 0, position_y: 500 };
+    
     page == "hot"
-      ? FetchMe("hot", bringMorePosts, scrollto.position_x, scrollto.position_y)
+      ? FetchMe("hot", bringMorePosts)
       : page == "new"
-      ? FetchMe("new", bringMorePosts, scrollto.position_x, scrollto.position_y)
+      ? FetchMe("new", bringMorePosts)
       : FetchMe(
           "top",
-          bringMorePosts,
-          scrollto.position_x,
-          scrollto.position_y
+          bringMorePosts
         );
   }
   return (
