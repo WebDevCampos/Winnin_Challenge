@@ -73,7 +73,7 @@ function App() {
           "top",
           bringMorePosts
         );
-    scrollBy(0, 500);
+   
   }
   return (
     <>
@@ -168,7 +168,7 @@ function App() {
             postedby={item.data.author}
           />
         ))}
-      <Footer evento={() => fetchMore()} />
+      <Footer evento={() => {fetchMore();  scrollBy(0, 500);}} />
     </>
   );
 }
