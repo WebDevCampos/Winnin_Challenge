@@ -54,6 +54,7 @@ function App() {
       .then((data) => {
         const mainContent = data.data.children;
         setContent(mainContent);
+      scrollBy(0, 500);
       });
   }, [category, limit]);
   function FetchMe(category, limit) {
@@ -65,7 +66,7 @@ function App() {
  
   function fetchMore() {
     let bringMorePosts = content.length + 10;
-    scrollBy(0, 500);
+    
     page == "hot"
       ? FetchMe("hot", bringMorePosts)
       : page == "new"
