@@ -44,34 +44,23 @@ const Button = styled.div`
 `;
 
 function App() {
-  const [content, setContent] = useState([]);
-  const [page, setPage] = useState("hot");
-
+  const [content, setContent] = useState();
+  const [category, setCategory] = useState("hot");
+  const [limit, setLimit] = useState(1);
+  const [page, setPage] = useState(category);
   useEffect(() => {
-    fetch(`https://www.reddit.com/r/reactjs.json?limit=1`).then((res) =>
-      res.json().then((data) => {
+    fetch(`https://www.reddit.com/r/reactjs/${category}.json?limit=${limit}`)
+      .then((res) => res.json())
+      .then((data) => {
         const mainContent = data.data.children;
-
         setContent(mainContent);
-
-        console.log(data);
-      })
-    );
-  }, []);
-  function FetchMe(categorie, limit) {
-    fetch(
-      `https://www.reddit.com/r/reactjs/${categorie}.json?limit=${limit}`
-    ).then((res) =>
-      res.json().then((data) => {
-        const mainContent = data.data.children;
-
-        setPage(categorie);
-        setContent(mainContent);
-        console.log(categorie);
-        console.log(data);
-        scrollBy(0,500);
-      })
-    );
+      });
+  }, [category, limit]);
+  function FetchMe(category, limit) {
+    setCategory(category);
+    setLimit(limit);
+    setPage(category);
+    scrollBy(0, 500);
   }
   function fetchMore() {
     let bringMorePosts = content.length + 10;
