@@ -62,6 +62,9 @@ function App() {
     setPage(category);
     
   }
+  function scrollPage(){
+  return scrollBy(0, 500)
+  }
   function fetchMore() {
     let bringMorePosts = content.length + 10;
     
@@ -168,7 +171,7 @@ function App() {
             postedby={item.data.author}
           />
         ))}
-      <Footer evento={() => {fetchMore();  scrollBy(0, 500);}} />
+      <Footer evento={() => {fetchMore(); scrollPage();}} />
     </>
   );
 }
