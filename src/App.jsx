@@ -62,12 +62,10 @@ function App() {
     setPage(category);
     
   }
-  function scrollPage(){
-  return scrollBy(0, 500)
-  }
+ 
   function fetchMore() {
     let bringMorePosts = content.length + 10;
-    
+    scrollBy(0, 500)
     page == "hot"
       ? FetchMe("hot", bringMorePosts)
       : page == "new"
@@ -80,7 +78,7 @@ function App() {
   }
   return (
     <>
-    Pequeno Teste Sucesso
+    
       <Header />
 
       <TopNavigationContainer className="my-5">
@@ -171,7 +169,7 @@ function App() {
             postedby={item.data.author}
           />
         ))}
-      <Footer evento={() => {fetchMore(); scrollPage();}} />
+      <Footer evento={() => fetchMore()  />
     </>
   );
 }
