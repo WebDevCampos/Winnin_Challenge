@@ -169,7 +169,7 @@ function App() {
             postedby={item.data.author}
           />
         ))}
-      <Footer evento={() => fetchMore()  />
+      <Footer evento={() => {fetchMore()}  />
     </>
   );
 }
