@@ -60,7 +60,7 @@ function App() {
     setCategory(category);
     setLimit(limit);
     setPage(category);
-    scrollBy(0, 500);
+    
   }
   function fetchMore() {
     let bringMorePosts = content.length + 10;
@@ -73,6 +73,7 @@ function App() {
           "top",
           bringMorePosts
         );
+    scrollBy(0, 500);
   }
   return (
     <>
