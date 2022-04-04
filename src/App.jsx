@@ -65,7 +65,7 @@ function App() {
  
   function fetchMore() {
     let bringMorePosts = content.length + 10;
-    scrollBy(0, 500)
+    scrollBy(0, 500);
     page == "hot"
       ? FetchMe("hot", bringMorePosts)
       : page == "new"
@@ -169,7 +169,9 @@ function App() {
             postedby={item.data.author}
           />
         ))}
-      <Footer evento={() => {fetchMore()}  />
+      <Footer evento={() => {
+          fetchMore();
+        }}  />
     </>
   );
 }
