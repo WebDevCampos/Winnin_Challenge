@@ -89,7 +89,7 @@ function App() {
             onClick={() => {
               FetchMe("hot", 1);
 
-              console.log(page);
+             
             }}
           >
             Hot
@@ -100,7 +100,7 @@ function App() {
             onClick={() => {
               FetchMe("hot", 1);
 
-              console.log(page);
+            
             }}
           >
             Hot
@@ -113,7 +113,7 @@ function App() {
             onClick={() => {
               FetchMe("new", 3);
 
-              console.log(page);
+            
             }}
           >
             News
@@ -124,7 +124,7 @@ function App() {
             onClick={() => {
               FetchMe("new", 3);
 
-              console.log(page);
+           
             }}
           >
             News
@@ -137,7 +137,7 @@ function App() {
             onClick={() => {
               FetchMe("top", 3);
 
-              console.log(page);
+             
             }}
           >
             Rising
@@ -148,7 +148,7 @@ function App() {
             onClick={() => {
               FetchMe("top", 3);
 
-              console.log(page);
+             
             }}
           >
             Rising
