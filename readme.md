@@ -33,4 +33,4 @@ Estou feliz por ter realizado esses estudos e por ter aprendido mais.
 #### Dias 28/03 a 01/04
 Consegui aplicar os styled-components e otimizar a função que busca as informações, chamando em cada botão suas respectivas categorias. Não preciso criar um `fetch` para cada categoria, apenas invocar a função e passar os parâmetros. Queria poder isolar essa função e chamá-la em outro componente, mas ainda não obtive o resultado desejado. Estudei mais sobre **Hooks**, julguei que o **useContext** fosse a melhor solução, mas ainda não poude compreendê-lo. Desfiz o **roteamento** pretendo refazê-lo.
   
-#### Dias 04/04 a 08/08/2022
+#### Dias 04/04 a 08/04/2022
