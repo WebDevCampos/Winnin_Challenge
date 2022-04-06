@@ -22,7 +22,7 @@
 
 ### O que melhorar na semana que vem (28/03 a 01/04)
  - [x] <sub>Feito dia 29/03/22</sub> Organizar os estilos, de preferência utilizando os **styled-components** 
- - [x] <sub>Feito dia 29/03/22</sub> Procurar otimizar as funções de **fecth**
+ - [x] <sub>Feito dia 29/03/22</sub> Procurar otimizar as funções de **fetch**
  - [x] <sub>Feito dia 31/03/22</sub> Entender melhor as **renderizações condicionais** e **Hooks** como o **useEffect**.
  
 ### Considerações finais (por hora)
