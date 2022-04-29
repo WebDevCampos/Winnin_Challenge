@@ -1,7 +1,18 @@
-import "./Footer.css";
+import styled from "styled-components";
 
-function Footer() {
+const MainFooter = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--mainBackground);
+  color: #fff;
+  font-family: Mulish;
+  height: 48px;
+  border-radius: 8px;
+`;
+function Footer({ evento }) {
   return (
+<<<<<<< HEAD
     <footer
       className="container d-flex justify-content-center align-items-center mainFooter  bottom-0"
       onClick={() => {
@@ -10,8 +21,11 @@ function Footer() {
         scroll(0, 500);
       }}
     >
+=======
+    <MainFooter className="container" onClick={evento}>
+>>>>>>> 4452f1b2f1fd5b6b1d6e0abab134218f618b8bd6
       + Ver Mais
-    </footer>
+    </MainFooter>
   );
 }
 export default Footer;
