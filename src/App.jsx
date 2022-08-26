@@ -46,7 +46,7 @@ const Button = styled.div`
 function App() {
   const [content, setContent] = useState();
   const [category, setCategory] = useState("hot");
-  const [limit, setLimit] = useState(1);
+  const [limit, setLimit] = useState(3);
   const [page, setPage] = useState(category);
   useEffect(() => {
     fetch(`https://www.reddit.com/r/reactjs/${category}.json?limit=${limit}`)
