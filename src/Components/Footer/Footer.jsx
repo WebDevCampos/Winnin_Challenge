@@ -20,7 +20,10 @@ function Footer({ evento }) {
         document.querySelector("main").style.height = "auto";
         scroll(0, 500);
       }}
-    > </footer>
+    > <MainFooter className="container" onClick={evento}>
+
+      + Ver Mais
+    </MainFooter></footer>
   );
 }
 export default Footer;
