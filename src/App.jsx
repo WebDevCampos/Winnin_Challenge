@@ -87,7 +87,7 @@ function App() {
           <Button
             style={{ backgroundColor: "var(--mainBackground)" }}
             onClick={() => {
-              FetchMe("hot", 3);
+              FetchMe("hot", 1);
 
              
             }}
