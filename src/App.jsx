@@ -98,7 +98,7 @@ function App() {
           <Button
             className="topBtn"
             onClick={() => {
-              FetchMe("hot", 3);
+              FetchMe("hot", 1);
 
             
             }}
